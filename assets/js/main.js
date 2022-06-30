@@ -1,9 +1,4 @@
-/**
-* Template Name: Personal - v4.7.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -245,3 +240,21 @@
   });
 
 })()
+
+function validateForm(){
+  
+  var name=document.getElementById('name').value;
+  var num=document.getElementById('number').value;
+
+  if((name.length <5)||(name==" ")||(num.length<10)||(num.length>10))
+  {
+    messageBox.innerHTML="Enter Valid Data:<br>Name Should be 5 characters<br> Valid Email<br> Mob Number should be 10 digits";
+    return false;
+  }
+  else{
+    messageBox.innerHTML="";
+    return true;
+  }
+  
+
+}
